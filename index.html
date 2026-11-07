@@ -9,7 +9,21 @@
   </head>
   <body class="bg-[#0A0D14] text-slate-100">
     <div id="root"></div>
-    <!-- التعديل هنا: استبدال main.jsx بـ App.jsx مباشرة -->
-    <script type="module" src="/src/App.jsx"></script>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
+```[cite: 9]
+
+### الخطوة الثانية: إنشاء ملف `src/main.jsx` النظيف
+قم بإنشاء ملف باسم **`main.jsx`** حصرياً داخل مجلد **`src`** وضع بداخله هذا الكود:
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
+import './App.css';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
