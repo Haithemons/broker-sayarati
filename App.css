@@ -25,3 +25,20 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #334155;
 }
+/* منع التمرير الأفقي الزائد في الشاشات الصغيرة */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* تحسين حجم الخطوط وتجربة اللمس للأزرار على الهاتف */
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+  
+  /* زيادة مساحة الضغط على الأزرار لراحة المستخدم */
+  button, input, select {
+    min-height: 44px;
+  }
+}
